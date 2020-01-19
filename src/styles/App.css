@@ -1,0 +1,12 @@
+.body-center {
+    background: white;
+    padding: 20px;
+    box-shadow:0 0 10px 2px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.main {
+    grid-column: 1/4;
+}

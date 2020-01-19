@@ -1,0 +1,31 @@
+.create-question-container {
+    grid-column: 1/4;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    padding: 15px;
+}
+
+.create-question-title { 
+    font-size: 1.0em;
+    grid-column: 1/5;
+}
+
+.create-question-field {
+    grid-column: 1/5;
+    text-overflow: ellipsis;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.create-question-radio-group {
+    grid-column: 1/5;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.create-question-btn {
+    grid-column: 1/5;
+}

@@ -1,0 +1,20 @@
+.edit-container {
+    margin-top: 15px;
+}
+
+.update-question-edit-field{
+    margin-top: 15px;
+    text-overflow: ellipsis;
+}
+
+.edit-radio-group {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.edit-btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+}

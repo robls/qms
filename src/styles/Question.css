@@ -1,0 +1,21 @@
+.question-item {
+    font-size: 0.8em;
+    border: solid 1px rgb(88, 88, 88);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    display: grid;    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;   
+    text-overflow: ellipsis; 
+    overflow: hidden;
+}
+
+.question-body-container {
+    grid-column: 1/5;
+    text-align: left;
+}
+
+.question-btn-editar {
+    width: 80px
+}
+
