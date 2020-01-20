@@ -31,3 +31,9 @@
     text-align: left;
     margin-left: 5px;
 }
+
+.edit-choice-id {
+    padding-top: 5px;
+    text-align: right;
+    grid-column: 1/4;
+}

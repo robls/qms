@@ -6,15 +6,15 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;   
     text-overflow: ellipsis; 
     overflow: hidden;
-    grid-column-gap: 10px;
+    grid-column-gap: 25px;
 }
 
 .question-body-container {
     grid-column: 1/5;
     text-align: left;
     background: white;
-    padding: 5px;
-    border: dashed 1px #444444;
+    padding: 3px;
+    border: double 3px #777777;
 }
 
 .question-edit-body {

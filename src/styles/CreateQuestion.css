@@ -6,13 +6,14 @@
 }
 
 .create-question-title { 
+    font-size: 1.2em;
     font-family: 'RobotoCondensed';
-    background: white;
-    color: #444444;
+    color: white;
+    background: #f30067;
     text-align: center;
+    border: double 4px white;
     padding: 5px;
-    margin-bottom: 10px;
-    font-size: 1.5em;
+    margin-bottom: 10px;   
     grid-column: 2/4;
 }
 

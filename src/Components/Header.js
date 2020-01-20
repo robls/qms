@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header-text">Case 02 - EnfaseLabs</div>
-        <Link to="/home" className="header-link home">
+        <Link to="/" className="header-link home">
           Listar Questões
         </Link>
         <Link to="/novaQuestao" className="header-link new-question">

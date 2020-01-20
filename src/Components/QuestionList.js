@@ -15,6 +15,8 @@ const READ_QUESTIONS = gql`
       d
       e
       correctAnswer
+      createdAt
+      editedAt
     }
   }
 `;
@@ -25,10 +27,12 @@ class QuestionList extends Component {
     return (
         <Query query={READ_QUESTIONS}>
         {({ loading, error, data }) => {
-          if (loading) return <div className="question-list-header-text" >Carregando Listas</div>
-          if (error) return <div className="question-list-header-text" >Error</div>
+          if (loading) return <div className="question-list-header-text" >Carregando a lista...</div>
+          if (error) return <div className="question-list-header-text" >Erro ao buscar questões</div>
 
-          const questionsToRender = data.questions  
+          const questionsToRender = data.questions 
+          const numberOfQuestions = Object.keys(questionsToRender).length
+          if( numberOfQuestions === 0 ) return <div className="no-questions-warning" >Não existem questões cadastradas ainda.</div>
 
           return (
             <Fragment>

@@ -22,9 +22,8 @@ class Question extends Component {
 
   substring(s){ 
     let size = Object.keys(s).length;
-    console.log();
-    if( size > 35 ){
-      return s.substring(0,35).concat('...');
+    if( size > 40 ){
+      return s.substring(0,40).concat('...');
     }else{
       return s;
     }

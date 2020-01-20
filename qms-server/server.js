@@ -2,17 +2,18 @@ const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 const cors = require('cors');
 
-
 let questions = [
   {
     id: Date.now().toString(),
-    body: 'Pergunta Teste Numero 1 ',
+    body: 'Pergunta Teste Numero 1',
     a: 'Alternativa A',
     b: 'Alternativa B',
     c: 'Alternativa C',
     d: 'Alternativa D',
     e: 'Alternativa E',
     correctAnswer: 'a',
+    createdAt: new Date().toLocaleString(),
+    editedAt: ''
   }
 ];
 
@@ -29,19 +30,33 @@ const typeDefs = gql`
     d: String 
     e: String
     correctAnswer: String
+    createdAt: String
+    editedAt: String
   } 
   type Mutation {
     createQuestion(
       body: String!
-      a: String
-      b: String
-      c: String
-      d: String
-      e: String
-      correctAnswer: String
-      ): String
+      a: String!
+      b: String!
+      c: String!
+      d: String!
+      e: String!
+      correctAnswer: String!
+      createdAt: String
+      editedAt: String
+      ):String
     removeQuestion(id: String!):String
-    updateQuestion(id: String! body: String! a: String! b: String! c: String! d: String! e: String! correctAnswer: String!):String
+    updateQuestion(
+      id: String! 
+      body: String! 
+      a: String! 
+      b: String!
+      c: String! 
+      d: String! 
+      e: String! 
+      correctAnswer: String! 
+      createdAt: String!
+      ):String
   }
 `;
 
@@ -59,7 +74,8 @@ const resolvers = {
         c: args.c,
         d: args.d,
         e: args.e,
-        correctAnswer: args.correctAnswer
+        correctAnswer: args.correctAnswer,
+        createdAt: new Date().toLocaleTimeString(),
       });
     },
     removeQuestion: (parent, args, context, info) => {      
@@ -74,6 +90,7 @@ const resolvers = {
       for (let i in questions) {
         if (questions[i].id === args.id) {
           questions[i] = args;
+          questions[i].editedAt = new Date().toLocaleString();
         }
       }
       return args.id;

@@ -21,6 +21,9 @@ ReactDOM.render(
   <BrowserRouter>
     <ApolloProvider client={client}>
       <App/>
+      <footer>
+        João Roberto Lopes da Silva - 2020
+      </footer>
     </ApolloProvider>
   </BrowserRouter>,
   document.getElementById('root')

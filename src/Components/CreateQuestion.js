@@ -32,18 +32,33 @@ class CreateQuestion extends Component {
     c: '',
     d: '',
     e: '',
-    correctAnswer: '',    
+    correctAnswer: '',
+  }
+
+  checkEmptyString(array, mutation){
+    let isEmpty = false
+    Object.values(array).forEach(value => {
+        console.log(value)
+        if(value === ''){
+            isEmpty = true;              
+        }
+    })
+    if(isEmpty) { 
+        alert('Existem campos vazios !');
+    }else {        
+        mutation()
+        alert('Questão adicionada com sucesso !');
+        this.props.history.go('/');
+    }    
   }
 
   render() {
 
-    const { body, a, b, c, d, e, correctAnswer } = this.state
+    const { body, a, b, c, d, e, correctAnswer} = this.state
 
     return (
       <div className="create-question-container">
-
-        <div className="create-question-title">Nova Questão</div> 
-
+        <div className="create-question-title">Nova Questão</div>
         <input
             className="create-question-field"
             value={body}
@@ -87,41 +102,41 @@ class CreateQuestion extends Component {
             placeholder="Alternativa E"
         />
 
-        <div className = "create-question-title">Alternativa Correta: </div>
+        <div className = "create-question-title">Alternativa Correta:</div>
 
         <div className = "create-question-radio-group">
             <label>
-                <input type="radio" value="a" checked={this.state.correctAnswer === 'a'} onChange={e => this.setState({ correctAnswer: e.target.value })} />
+                <input type = "radio" value = "a" checked = { this.state.correctAnswer === 'a' } 
+                onChange={e => this.setState({ correctAnswer: e.target.value })}/>
                 A
             </label>
             <label>
-                <input type="radio" value="b" checked={this.state.correctAnswer === 'b'} onChange={e => this.setState({ correctAnswer: e.target.value })}/>
+                <input type="radio" value="b" checked = { this.state.correctAnswer === 'b' } 
+                onChange={e => this.setState({ correctAnswer: e.target.value })}/>
                 B
             </label>
-
             <label>
-                <input type="radio" value="c" checked={this.state.correctAnswer === 'c'} onChange={e => this.setState({ correctAnswer: e.target.value })} />
+                <input type="radio" value="c" checked = { this.state.correctAnswer === 'c' } 
+                onChange={e => this.setState({ correctAnswer: e.target.value })}/>
                 C
-            </label>            
-
+            </label>
             <label>
-                <input type="radio" value="d" checked={this.state.correctAnswer === 'd'} onChange={e => this.setState({ correctAnswer: e.target.value })} />
+                <input type="radio" value="d" checked = {this.state.correctAnswer === 'd' } 
+                onChange={e => this.setState({ correctAnswer: e.target.value })}/>
                 D
-            </label>            
-
+            </label>
             <label>
-                <input type="radio" value="e" checked={this.state.correctAnswer === 'e'} onChange={e => this.setState({ correctAnswer: e.target.value })} />
+                <input type="radio" value="e" checked = {this.state.correctAnswer === 'e' } 
+                onChange={e => this.setState({ correctAnswer: e.target.value })}/>
                 E
             </label>
         </div> 
-
         <div className = "create-question-btn">
             <Mutation 
-                mutation={ CREATE_QUESTION } 
-                variables={ { body, a, b, c, d, e, correctAnswer } } 
-                onCompleted = { () => this.props.history.go('/home')
-            }>
-                {postMutation => <button onClick={postMutation}>Adicionar Questão</button>}                
+                mutation = { CREATE_QUESTION } 
+                variables = { { body, a, b, c, d, e, correctAnswer}} 
+                onCompleted = { () => console.log("Questao inserida com sucesso")}>
+                {postMutation => <button onClick={ () => this.checkEmptyString( [ body, a, b, c, d, e, correctAnswer], postMutation ) }>Adicionar Questão</button>}                
             </Mutation>
         </div>
 
