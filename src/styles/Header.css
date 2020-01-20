@@ -1,25 +1,30 @@
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url(../fonts/RobotoCondensed-Bold.ttf);
+}
+
 .header {
-    grid-column: 1/4;
+    grid-column: 1/6;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-gap: 5px;
-    color: white;
-    background: linear-gradient(to right, #07c5c5, #20e3b2);
-    padding: 15px;
+    background: #444444;
 }
 
 .header-text {
-    font-size: 1.4em;
+    color: white;
+    margin-top: 10px;
+    font-family: 'RobotoCondensed';
+    font-size: 1.8em;
     grid-column: 1/5; 
-    grid-row: 1/1;
 }
 
 .header-link {
-    grid-row: 2/2;
-    font-size: 1.0em;
-    border: solid 1px rgba(119, 119, 119, 0.459);
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 1em;
+    border: solid 1px rgba(179, 179, 179, 0.459);
     text-decoration: none;
     background: white;
     color: black;
@@ -30,8 +35,8 @@
 }
 
 .header-link:hover {
-    background: rgb(247, 247, 247);
-    border: solid 1px rgb(58, 58, 58);
+    background: #fdfdfd;
+    border: double 1px #f30067;
 }
 
 .home {

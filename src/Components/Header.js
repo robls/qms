@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <div className="header-text">Sistema de Gerenciamento de Questões</div>
+        <div className="header-text">Case 02 - EnfaseLabs</div>
         <Link to="/home" className="header-link home">
         Listar Questões
         </Link>

@@ -1,4 +1,19 @@
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url(../fonts/RobotoCondensed-Bold.ttf);
+}
+
 .question-list-header-text {
+    font-size: 1.4em;
+    font-family: 'RobotoCondensed';
+    background: white;
+    color: #444444;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
+    margin-bottom: 10px;    
+}
+
+.question-list-container {
+    background: white;
+
 }

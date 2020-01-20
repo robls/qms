@@ -25,15 +25,15 @@ class QuestionList extends Component {
     return (
         <Query query={READ_QUESTIONS}>
         {({ loading, error, data }) => {
-          if (loading) return <div>Fetching</div>
-          if (error) return <div>Error</div>
+          if (loading) return <div className="question-list-header-text" >Carregando Listas</div>
+          if (error) return <div className="question-list-header-text" >Error</div>
 
-          const questionsToRender = data.questions   
+          const questionsToRender = data.questions  
 
           return (
             <Fragment>
               <div className="question-list-header-text">Lista de Questões</div>
-              <div>
+              <div className = "question-list-container">
                 {questionsToRender.map( question => <Question key={question.id} question = {question} />)}
               </div>
             </Fragment>

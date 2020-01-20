@@ -1,20 +1,33 @@
 .edit-container {
     margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .update-question-edit-field{
-    margin-top: 15px;
+    grid-column: 1/4;
     text-overflow: ellipsis;
+    padding: 5px;
 }
 
 .edit-radio-group {
-    padding: 15px;
+    margin-top: 10px;
+    background: white;
+    border-radius: 15px;
+    padding: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .edit-btn-container {
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5px;
+    grid-column-gap: 30px;
+}
+
+.edit-choice-label {
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 5px;
 }

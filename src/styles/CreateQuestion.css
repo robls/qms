@@ -1,15 +1,21 @@
 .create-question-container {
-    grid-column: 1/4;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
-    padding: 15px;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .create-question-title { 
+    font-family: 'RobotoCondensed';
+    background: white;
+    color: #444444;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
     font-size: 1.0em;
-    grid-column: 1/5;
+    grid-column: 2/4;
 }
 
 .create-question-field {
@@ -20,12 +26,14 @@
 }
 
 .create-question-radio-group {
-    grid-column: 1/5;
-    padding: 15px;
+    grid-column: 2/4;
+    padding: 1px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background: white;
 }
 
 .create-question-btn {
-    grid-column: 1/5;
+    margin-top: 10px;
+    grid-column: 2/4;
 }

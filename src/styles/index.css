@@ -1,18 +1,18 @@
 @font-face {
-  font-family: 'RobotoMono';
-  src: url(../fonts/RobotoMono-Light.ttf);
+  font-family: 'Lato';
+  src: url(../fonts/Gelasio-Regular.ttf);
 }
 
 *{
-  font-family: 'RobotoMono', monospace;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
+  background: #444444;
   box-sizing: 0;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #07c5c5, #20e3b2, #29ffc6);
   overflow: scroll;
 }

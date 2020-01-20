@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react'
+import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import '../styles/UpdateQuestion.css'
@@ -15,7 +15,6 @@ const UPDATE_QUESTION = gql`
     updateQuestion(id: $id body: $body, a: $a, b: $b, c: $c, d: $d, e: $e, correctAnswer: $correctAnswer)
   }
 `;
- 
  
 
 class UpdateQuestion extends Component {
@@ -38,44 +37,51 @@ class UpdateQuestion extends Component {
         return(
             <div>
                 <div className = "edit-container"> 
+                    <div className = "edit-choice-label">Pergunta:</div>
                     <input
                         className="update-question-edit-field"
                         value={body}
                         onChange={e => this.setState({ body: e.target.value })}
                         type="text"
                         placeholder="Pergunta"
-                    />                
+                    />   
+                    <div className = "edit-choice-label">Alternativa A:</div>             
                     <input
                         className="update-question-edit-field"
                         value={a}
                         onChange={e => this.setState({ a: e.target.value })}
                         type="text"
-                    />                
+                    />
+                    <div className = "edit-choice-label">Alternativa B:</div>                
                     <input
                         className="update-question-edit-field"
                         value={b}
                         onChange={e => this.setState({ b: e.target.value })}
                         type="text"
-                    />                
+                    />
+                    <div className = "edit-choice-label">Alternativa C:</div>                
                     <input
                         className="update-question-edit-field"
                         value={c}
                         onChange={e => this.setState({ c: e.target.value })}
                         type="text"
-                    />                
+                    />
+                    <div className = "edit-choice-label">Alternativa D:</div>
                     <input
                         className="update-question-edit-field"
                         value={d}
                         onChange={e => this.setState({ d: e.target.value })}
                         type="text"
-                    />                
+                    />
+                    <div className = "edit-choice-label">Alternativa E:</div> 
                     <input
                         className="update-question-edit-field"
                         value={e}
                         onChange={e => this.setState({ e: e.target.value })}
                         type="text"
                     />                    
-                </div>  
+                </div>
+                <div className = "edit-choice-label">Alternativa Correta:</div>                   
                 <div className = "edit-radio-group">
                     <div className="edit-radio">
                         <label>

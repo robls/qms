@@ -40,9 +40,9 @@ class Question extends Component {
           </div>          
           <button className = "question-btn-editar" onClick = {this.toggleQuestion}>Editar</button>
           {showQuestion && (
-            <Fragment>
+            <div className = "question-edit-body">
               <UpdateQuestion question = {this.props.question}/>
-            </Fragment>            
+            </div>            
           )}
         </div>
       </Fragment>

@@ -1,21 +1,24 @@
 .question-item {
-    font-size: 0.8em;
-    border: solid 1px rgb(88, 88, 88);
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    display: grid;    
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;   
     text-overflow: ellipsis; 
     overflow: hidden;
+    grid-column-gap: 10px;
+    border-bottom: double 5px #444444;
 }
 
 .question-body-container {
     grid-column: 1/5;
     text-align: left;
+    background: white;
+    border-bottom: dashed 1px #444444;
 }
 
-.question-btn-editar {
-    width: 80px
+.question-edit-body {
+    text-align: center;
+    grid-column: 1/6;
 }
 

@@ -28,7 +28,7 @@ class CreateQuestion extends Component {
 
     return (
       <div className="create-question-container">
-        <div className="create-question-title">Nova Questão</div>        
+        <div className="create-question-title">Nova Questão</div>      
         <input
             className="create-question-field"
             value={body}
