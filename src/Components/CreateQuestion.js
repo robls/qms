@@ -4,10 +4,23 @@ import gql from 'graphql-tag'
 import '../styles/CreateQuestion.css'
 
 const CREATE_QUESTION = gql`
-  mutation createQuestion($body: String!, $a: String!, $b: String!, $c: String!,
-    $d: String!, $e: String!, $correctAnswer: String!) {
-        createQuestion(body: $body, a: $a, b: $b, c: $c, d: $d, e: $e, correctAnswer: $correctAnswer)
-  }
+    mutation createQuestion(
+        $body: String!,
+        $a: String!, 
+        $b: String!, 
+        $c: String!,
+        $d: String!,
+        $e: String!, 
+        $correctAnswer: String!
+    ){createQuestion(
+        body: $body,
+        a: $a, 
+        b: $b, 
+        c: $c, 
+        d: $d, 
+        e: $e, 
+        correctAnswer: $correctAnswer
+    )}
 `;
 
 class CreateQuestion extends Component {
@@ -28,7 +41,9 @@ class CreateQuestion extends Component {
 
     return (
       <div className="create-question-container">
-        <div className="create-question-title">Nova Questão</div>      
+
+        <div className="create-question-title">Nova Questão</div> 
+
         <input
             className="create-question-field"
             value={body}
@@ -72,7 +87,7 @@ class CreateQuestion extends Component {
             placeholder="Alternativa E"
         />
 
-        <div className = "create-question-title">Qual das alternativas corresponde a resposta correta ?</div>
+        <div className = "create-question-title">Alternativa Correta: </div>
 
         <div className = "create-question-radio-group">
             <label>
@@ -98,7 +113,8 @@ class CreateQuestion extends Component {
                 <input type="radio" value="e" checked={this.state.correctAnswer === 'e'} onChange={e => this.setState({ correctAnswer: e.target.value })} />
                 E
             </label>
-        </div>        
+        </div> 
+
         <div className = "create-question-btn">
             <Mutation 
                 mutation={ CREATE_QUESTION } 
@@ -108,6 +124,7 @@ class CreateQuestion extends Component {
                 {postMutation => <button onClick={postMutation}>Adicionar Questão</button>}                
             </Mutation>
         </div>
+
       </div>
     )
   }

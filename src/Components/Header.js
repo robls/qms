@@ -9,10 +9,10 @@ class Header extends Component {
       <div className="header">
         <div className="header-text">Case 02 - EnfaseLabs</div>
         <Link to="/home" className="header-link home">
-        Listar Questões
+          Listar Questões
         </Link>
         <Link to="/novaQuestao" className="header-link new-question">
-        Nova Questão
+          Nova Questão
         </Link>        
       </div>
     )

@@ -1,20 +1,20 @@
 .question-item {
     font-size: 1em;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;   
     text-overflow: ellipsis; 
     overflow: hidden;
     grid-column-gap: 10px;
-    border-bottom: double 5px #444444;
 }
 
 .question-body-container {
     grid-column: 1/5;
     text-align: left;
     background: white;
-    border-bottom: dashed 1px #444444;
+    padding: 5px;
+    border: dashed 1px #444444;
 }
 
 .question-edit-body {

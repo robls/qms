@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
-    background: #444444;
+    background: #f30067;
 }
 
 .header-text {
