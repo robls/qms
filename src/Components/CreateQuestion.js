@@ -32,7 +32,7 @@ class CreateQuestion extends Component {
   }
 
   render() {
-      
+
     const { body, a, b, c, d, e, correctAnswer} = this.state
 
     return (
@@ -114,7 +114,9 @@ class CreateQuestion extends Component {
             <Mutation 
                 mutation = { CREATE_QUESTION } 
                 variables = { { body, a, b, c, d, e, correctAnswer } }>
-                {postMutation => <button onClick={ () => this.checkEmptyString( [ body, a, b, c, d, e, correctAnswer], postMutation ) }>Adicionar Questão</button>}                
+                {postMutation => <button onClick={ () => this.checkEmptyString(
+                    [ body, a, b, c, d, e, correctAnswer],
+                    postMutation ) }>Adicionar Questão</button>}                
             </Mutation>
         </div>
 

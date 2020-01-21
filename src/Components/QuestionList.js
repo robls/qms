@@ -14,14 +14,14 @@ class QuestionList extends Component {
           if (error) return <div className="question-list-header-text" >Erro ao buscar questões</div>
 
           const questionsToRender = data.questions 
-          const numberOfQuestions = Object.keys(questionsToRender).length
-          if( numberOfQuestions === 0 ) return <div className="no-questions-warning" >Não existem questões cadastradas ainda.</div>
+          const dataLenght = Object.keys(questionsToRender).length
+          if( dataLenght === 0 ) return <div className="no-questions-warning" >Não existem questões cadastradas ainda.</div>
 
           return (
             <Fragment>
               <div className="question-list-header-text">Lista de Questões</div>
               <div className = "question-list-container">
-                {questionsToRender.map( question => <Question key={question.id} question = {question} />)}                
+                {questionsToRender.map( question => <Question key={question.id} question = {question} />)}               
               </div>
             </Fragment>
           )
