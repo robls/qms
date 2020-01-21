@@ -6,18 +6,11 @@
 .question-list-header-text {
     font-size: 1.4em;
     font-family: 'RobotoCondensed';
-    color: white;
-    background: #f30067;
+    color: #444444;
     text-align: center;
     border: double 4px white;
-    padding: 5px;
     margin-bottom: 10px;    
 }
-
-.question-list-container {
-    background: white;
-}
-
 .no-questions-warning {
     font-size: 1.4em;
     font-family: 'RobotoCondensed';

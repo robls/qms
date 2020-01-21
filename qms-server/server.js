@@ -20,6 +20,7 @@ let questions = [
 const typeDefs = gql`
   type Query {
     questions: [Question]!
+    search(input: String!): [Question]
   }
   type Question {
     id: String
@@ -63,6 +64,9 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     questions: () => questions,
+    search: (parent, args, context, info) => questions.filter(
+      question => question.body.toLowerCase().includes(args.input)
+    )
   },
   Mutation: {
    createQuestion: (parent, args, context, info) => {
@@ -75,7 +79,7 @@ const resolvers = {
         d: args.d,
         e: args.e,
         correctAnswer: args.correctAnswer,
-        createdAt: new Date().toLocaleTimeString(),
+        createdAt: new Date().toLocaleString("pt-BR"),
       });
     },
     removeQuestion: (parent, args, context, info) => {      
@@ -90,7 +94,7 @@ const resolvers = {
       for (let i in questions) {
         if (questions[i].id === args.id) {
           questions[i] = args;
-          questions[i].editedAt = new Date().toLocaleString();
+          questions[i].editedAt = new Date().toLocaleString("pt-BR");
         }
       }
       return args.id;
@@ -103,7 +107,9 @@ const server = new ApolloServer({ typeDefs, resolvers });
 const app = express();
 server.applyMiddleware({ app });
 
-app.use(cors());
+
+
+app.use(cors({}));
 
 app.listen({ port: 4000 }, () =>
   console.log('Now browse to http://localhost:4000' + server.graphqlPath)

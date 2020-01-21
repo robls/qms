@@ -1,24 +1,40 @@
 .question-item {
     font-size: 1em;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 5px;
+    background: rgb(247, 247, 247);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;   
-    text-overflow: ellipsis; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;   
+    text-overflow: ellipsis;
+    border: solid 1px #777777; 
     overflow: hidden;
-    grid-column-gap: 25px;
 }
 
 .question-body-container {
-    grid-column: 1/5;
+    grid-column: 1/9;
     text-align: left;
-    background: white;
-    padding: 3px;
-    border: double 3px #777777;
+    padding: 4px;
+    overflow: hidden;
 }
 
 .question-edit-body {
     text-align: center;
-    grid-column: 1/6;
+    grid-column: 1/9;
 }
 
+.edit-btn{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edit-btn:hover{
+    width: 22px;
+    height: 22px;
+}
+
+.divider {
+    padding: 10px;
+    text-align: center;
+}

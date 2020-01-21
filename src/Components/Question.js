@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import UpdateQuestion from './UpdateQuestion'
 import '../styles/Question.css'
+import edit from '../icons/editIcon.png'
 
 
 class Question extends Component {
@@ -37,13 +38,14 @@ class Question extends Component {
           <div className = "question-body-container ">
             {this.substring(this.props.question.body)}
           </div>          
-          <button className = "question-btn-editar" onClick = {this.toggleQuestion}>Editar</button>
+          <img className ="edit-btn" src = {edit} alt = 'Editar'  onClick = {this.toggleQuestion}></img>
           {showQuestion && (
             <div className = "question-edit-body">
               <UpdateQuestion question = {this.props.question}/>
             </div>            
-          )}
+          )}          
         </div>
+        <div className = "divider">--------</div>
       </Fragment>
     )
   }

@@ -8,12 +8,10 @@
 .create-question-title { 
     font-size: 1.2em;
     font-family: 'RobotoCondensed';
-    color: white;
-    background: #f30067;
+    color: #444444;
     text-align: center;
     border: double 4px white;
-    padding: 5px;
-    margin-bottom: 10px;   
+    padding: 5px;  
     grid-column: 2/4;
 }
 
@@ -22,6 +20,13 @@
     text-overflow: ellipsis;
     padding: 5px;
     margin-bottom: 10px;
+    border-radius: 2px;
+    border: solid 2px #444444;
+
+}
+
+.question-field{
+    border: solid 2px #f30067;
 }
 
 .create-question-radio-group {
@@ -35,4 +40,5 @@
 .create-question-btn {
     margin-top: 10px;
     grid-column: 2/4;
+    margin-bottom: 10px;
 }

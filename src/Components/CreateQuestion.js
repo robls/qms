@@ -1,27 +1,7 @@
 import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
-import gql from 'graphql-tag'
 import '../styles/CreateQuestion.css'
-
-const CREATE_QUESTION = gql`
-    mutation createQuestion(
-        $body: String!,
-        $a: String!, 
-        $b: String!, 
-        $c: String!,
-        $d: String!,
-        $e: String!, 
-        $correctAnswer: String!
-    ){createQuestion(
-        body: $body,
-        a: $a, 
-        b: $b, 
-        c: $c, 
-        d: $d, 
-        e: $e, 
-        correctAnswer: $correctAnswer
-    )}
-`;
+import { CREATE_QUESTION } from './QueriesAndMutations'
 
 class CreateQuestion extends Component {
 
@@ -38,7 +18,6 @@ class CreateQuestion extends Component {
   checkEmptyString(array, mutation){
     let isEmpty = false
     Object.values(array).forEach(value => {
-        console.log(value)
         if(value === ''){
             isEmpty = true;              
         }
@@ -47,20 +26,20 @@ class CreateQuestion extends Component {
         alert('Existem campos vazios !');
     }else {        
         mutation()
-        alert('Questão adicionada com sucesso !');
-        this.props.history.go('/');
+        alert('Questão adicionada.');
+        this.props.history.push('/');
     }    
   }
 
   render() {
-
+      
     const { body, a, b, c, d, e, correctAnswer} = this.state
 
     return (
       <div className="create-question-container">
         <div className="create-question-title">Nova Questão</div>
         <input
-            className="create-question-field"
+            className="create-question-field question-field"
             value={body}
             onChange={e => this.setState({ body: e.target.value })}
             type="text"
@@ -134,8 +113,7 @@ class CreateQuestion extends Component {
         <div className = "create-question-btn">
             <Mutation 
                 mutation = { CREATE_QUESTION } 
-                variables = { { body, a, b, c, d, e, correctAnswer}} 
-                onCompleted = { () => console.log("Questao inserida com sucesso")}>
+                variables = { { body, a, b, c, d, e, correctAnswer } }>
                 {postMutation => <button onClick={ () => this.checkEmptyString( [ body, a, b, c, d, e, correctAnswer], postMutation ) }>Adicionar Questão</button>}                
             </Mutation>
         </div>

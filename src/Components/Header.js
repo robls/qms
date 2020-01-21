@@ -7,13 +7,14 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <div className="header-text">Case 02 - EnfaseLabs</div>
+        <div className="header-title">EnfaseLabs</div>
+        <div className="header-text"> - Case 02 - </div>
         <Link to="/" className="header-link home">
-          Listar Questões
+          Listar
         </Link>
         <Link to="/novaQuestao" className="header-link new-question">
-          Nova Questão
-        </Link>        
+          Adicionar
+        </Link>   
       </div>
     )
   }

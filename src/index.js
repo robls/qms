@@ -14,7 +14,7 @@ const httpLink = createHttpLink({
 
 const client = new ApolloClient({
   link: httpLink,
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 })
 
 ReactDOM.render(
@@ -22,7 +22,7 @@ ReactDOM.render(
     <ApolloProvider client={client}>
       <App/>
       <footer>
-        João Roberto Lopes da Silva - 2020
+        Case 02 - EnfaseLabs
       </footer>
     </ApolloProvider>
   </BrowserRouter>,

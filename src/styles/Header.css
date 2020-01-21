@@ -7,26 +7,33 @@
     grid-column: 1/6;
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background: #f30067;
-    border: double 4px white;
+    border-bottom: double 5px rgb(255, 255, 255);
 }
 
 .header-text {
     color: white;
+    font-size: 1.2em;
+    grid-column: 4/8; 
+    margin-bottom: 5px;
+}
+.header-title {
+    color: white;
     margin-top: 10px;
     font-family: 'RobotoCondensed';
-    font-size: 1.8em;
-    grid-column: 1/5; 
+    font-size: 2.1em;
+    grid-column: 4/8; 
 }
 
+
 .header-link {
-    margin-bottom: 15px;
-    padding: 5px;
-    font-size: 1em;
+    margin-bottom: 10px;
+    font-size: .9em;
+    margin-right: 5px;
     border: solid 1px rgba(179, 179, 179, 0.459);
     text-decoration: none;
+    padding: 2px;
     background: white;
     color: black;
 }
@@ -41,9 +48,31 @@
 }
 
 .home {
-    grid-column: 2/3;
+    grid-column: 5/6;
 }
 
 .new-question {
-    grid-column: 3/4;
+    grid-column: 6/7;
+}
+
+.search-component {
+    grid-column: 1/11;
+}
+
+.search-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.search-icon:hover {
+    
+    height: 31px;
+    width: 31px;
+}
+
+.search-input {
+    vertical-align: top;
+    padding: 4px;
+    margin-bottom: 5px;
+    margin-right: 5px;
 }

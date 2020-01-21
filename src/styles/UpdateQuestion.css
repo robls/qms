@@ -8,13 +8,13 @@
     grid-column: 1/4;
     text-overflow: ellipsis;
     padding: 5px;
+    margin-left: 4px;
 }
 
 .edit-radio-group {
     margin-top: 10px;
-    background: white;
+    background: rgb(247, 247, 247);
     border-radius: 15px;
-    padding: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
@@ -23,7 +23,7 @@
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 30px;
+    grid-column-gap: 50px;
 }
 
 .edit-choice-label {
@@ -33,7 +33,6 @@
 }
 
 .edit-choice-id {
-    padding-top: 5px;
     text-align: right;
     grid-column: 1/4;
 }

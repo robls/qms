@@ -1,20 +1,7 @@
 import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
-import gql from 'graphql-tag'
 import '../styles/UpdateQuestion.css'
-
-const REMOVE_QUESTION = gql`
-  mutation removeQuestion($id: String! ) {
-    removeQuestion(id: $id)
-  }
-`;
-
-const UPDATE_QUESTION = gql`
-  mutation updateQuestion($id: String!, $body: String!, $a: String!, $b: String!, $c: String!,
-    $d: String!, $e: String!, $correctAnswer: String!, $createdAt: String! ) {
-    updateQuestion(id: $id body: $body, a: $a, b: $b, c: $c, d: $d, e: $e, correctAnswer: $correctAnswer, createdAt: $createdAt)
-  }
-`;
+import { UPDATE_QUESTION, REMOVE_QUESTION } from './QueriesAndMutations'
 
 class UpdateQuestion extends Component {
     
@@ -51,8 +38,6 @@ class UpdateQuestion extends Component {
                 mutation()
                 alert('Questão atualizada !');
             }
-
-
         }  
     }
 
@@ -112,41 +97,31 @@ class UpdateQuestion extends Component {
                 </div>
                 <div className = "edit-choice-label">Alternativa Correta:</div>                   
                 <div className = "edit-radio-group">
-                    <div className="edit-radio">
-                        <label>
-                            <input type="radio" value="a" checked={correctAnswer === 'a'} 
-                            onChange={e => this.setState({ correctAnswer: e.target.value })} />
-                            A
-                        </label>
-                    </div>
-                    <div className="edit-radio-item">
-                        <label>
-                            <input type="radio" value="b" checked={correctAnswer === 'b'} 
-                            onChange={e => this.setState({ correctAnswer: e.target.value })} />
-                            B
-                        </label>
-                    </div>
-                    <div className="edit-radio-item">
-                        <label>
-                            <input type="radio" value="c" checked={correctAnswer === 'c'} 
-                            onChange={e => this.setState({ correctAnswer: e.target.value })} />
-                            C
-                        </label>
-                    </div>
-                    <div className="edit-radio-item">
-                        <label>
-                            <input type="radio" value="d" checked={correctAnswer === 'd'} 
-                            onChange={e => this.setState({ correctAnswer: e.target.value })} />
-                            D
-                        </label>
-                    </div>
-                    <div className="edit-radio-item">
-                        <label>
-                            <input type="radio" value="e" checked={correctAnswer === 'e'} 
-                            onChange={e => this.setState({ correctAnswer: e.target.value })} />
-                            E
-                        </label>
-                    </div>
+                    <label>
+                        <input type="radio" value="a" checked = {correctAnswer === 'a'} 
+                        onChange={e => this.setState({ correctAnswer: e.target.value })} />
+                        A
+                    </label>
+                    <label>
+                        <input type="radio" value="b" checked = {correctAnswer === 'b'} 
+                        onChange={e => this.setState({ correctAnswer: e.target.value })} />
+                        B
+                    </label>
+                    <label>
+                        <input type="radio" value="c" checked = {correctAnswer === 'c'} 
+                        onChange={e => this.setState({ correctAnswer: e.target.value })} />
+                        C
+                    </label>
+                    <label>
+                        <input type="radio" value="d" checked = {correctAnswer === 'd'} 
+                        onChange={e => this.setState({ correctAnswer: e.target.value })} />
+                        D
+                    </label>
+                    <label>
+                        <input type="radio" value="e" checked = {correctAnswer === 'e'} 
+                        onChange={e => this.setState({ correctAnswer: e.target.value })} />
+                        E
+                    </label>
                 </div>
                 <div className= "edit-btn-container">
                     <Mutation 
