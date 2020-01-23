@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Lato';
-  src: url(../fonts/Gelasio-Regular.ttf);
+  src: url(../Fonts/Gelasio-Regular.ttf);
 }
 
-*{
+* {
   font-family: 'Lato', sans-serif;
 }
 
@@ -17,7 +17,7 @@ body {
   overflow: scroll;
 }
 
-footer{
+footer {
   font-size: 0.8em;
   color: rgb(221, 221, 221);
   text-align: center;

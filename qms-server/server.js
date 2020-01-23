@@ -18,10 +18,6 @@ let questions = [
 ];
 
 const typeDefs = gql`
-  type Query {
-    questions: [Question]!
-    search(input: String!): [Question]
-  }
   type Question {
     id: String
     body: String
@@ -34,6 +30,10 @@ const typeDefs = gql`
     createdAt: String
     editedAt: String
   } 
+  type Query {
+    questions: [Question]!
+    search(input: String!): [Question]
+  }
   type Mutation {
     createQuestion(
       body: String!
@@ -64,9 +64,11 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     questions: () => questions,
-    search: (parent, args, context, info) => questions.filter(
-      question => question.body.toLowerCase().includes(args.input)
-    )
+    search: (parent, args, context, info) => {
+      return questions.filter(
+        question => question.body.toLowerCase().includes(args.input)
+      )
+    }
   },
   Mutation: {
    createQuestion: (parent, args, context, info) => {

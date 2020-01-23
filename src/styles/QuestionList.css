@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'RobotoCondensed';
-    src: url(../fonts/RobotoCondensed-Bold.ttf);
+    src: url(../Fonts/RobotoCondensed-Bold.ttf);
 }
 
 .question-list-header-text {
@@ -20,4 +20,9 @@
     border: double 4px white;
     padding: 5px;
     margin-bottom: 10px;    
+}
+
+.question-list-filter-input {
+    padding: 3px;
+    margin-bottom: 10px;
 }

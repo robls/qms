@@ -68,3 +68,21 @@ export const UPDATE_QUESTION = gql`
     }
 `;
 
+
+export const FILTER_QUESTIONS = gql`
+    query search($input: String!){
+        search(input: $input) {
+            id
+            body
+            a
+            b
+            c
+            d
+            e
+            correctAnswer
+            createdAt
+            editedAt
+        }
+    }
+`;
+

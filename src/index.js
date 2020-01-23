@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './styles/index.css'
+import './Styles/index.css'
 import App from './Components/App.js'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
@@ -19,7 +19,7 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <BrowserRouter>
-    <ApolloProvider client={client}>
+    <ApolloProvider client = { client }>
       <App/>
       <footer>
         Case 02 - EnfaseLabs

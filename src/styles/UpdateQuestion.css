@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.update-question-edit-field{
+.update-question-edit-field { 
     grid-column: 1/4;
     text-overflow: ellipsis;
     padding: 5px;

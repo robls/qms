@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import LinkList from './QuestionList'
+import QuestionList from './QuestionList'
 import Header from './Header'
-import '../styles/App.css'
+import '../Styles/App.css'
 import { Switch, Route } from 'react-router-dom'
 import CreateQuestion from './CreateQuestion'
 
@@ -13,8 +13,8 @@ class App extends Component {
         <Header/>
         <div className = "main">
           <Switch>
-            <Route exact path="/" component = { LinkList } />
-            <Route exact path="/novaQuestao" component = { CreateQuestion } />
+            <Route exact path = "/" component = { QuestionList } />
+            <Route exact path = "/novaQuestao" component = { CreateQuestion } />
           </Switch>
         </div>
       </div>
