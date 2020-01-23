@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react'
 import Question from './Question'
 import { Query } from 'react-apollo'
-import '../Styles/QuestionList.css'
+import '../styles/QuestionList.css'
 import { FILTER_QUESTIONS } from './QueriesAndMutations'
 
 class QuestionList extends Component {

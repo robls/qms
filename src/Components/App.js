@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import QuestionList from './QuestionList'
 import Header from './Header'
-import '../Styles/App.css'
+import '../styles/App.css'
 import { Switch, Route } from 'react-router-dom'
 import CreateQuestion from './CreateQuestion'
 

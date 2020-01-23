@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
-import '../Styles/CreateQuestion.css'
+import '../styles/CreateQuestion.css'
 import { CREATE_QUESTION } from './QueriesAndMutations'
 
 class CreateQuestion extends Component {

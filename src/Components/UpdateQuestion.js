@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
-import '../Styles/UpdateQuestion.css'
+import '../styles/UpdateQuestion.css'
 import { UPDATE_QUESTION, REMOVE_QUESTION } from './QueriesAndMutations'
 
 class UpdateQuestion extends Component {

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import UpdateQuestion from './UpdateQuestion'
-import '../Styles/Question.css'
-import edit from '../Icons/editIcon.png'
+import '../styles/Question.css'
+import edit from '../icons/editIcon.png'
 
 
 class Question extends Component {
