@@ -7,6 +7,7 @@ import { ApolloClient } from 'apollo-client'
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { BrowserRouter } from 'react-router-dom'
+import logoEnfase from './icons/logoEnfase.png'
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:4000/graphql'
@@ -22,7 +23,7 @@ ReactDOM.render(
     <ApolloProvider client = { client }>
       <App/>
       <footer>
-        Case 02 - EnfaseLabs
+        <img src = {logoEnfase} alt = "logo enfase rodape"></img>
       </footer>
     </ApolloProvider>
   </BrowserRouter>,

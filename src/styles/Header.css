@@ -8,7 +8,7 @@
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background: #f30067;
+    background: #231940;
     border-bottom: double 5px rgb(255, 255, 255);
 }
 
@@ -18,20 +18,17 @@
     grid-column: 4/8; 
     margin-bottom: 5px;
 }
-.header-title {
-    color: white;
-    margin-top: 10px;
-    font-family: 'RobotoCondensed';
-    font-size: 2.1em;
+.header-logo  {
+    padding: 10px;
     grid-column: 4/8; 
+    margin: 0 auto;
 }
-
 
 .header-link {
     margin-bottom: 10px;
     font-size: .9em;
     margin-right: 5px;
-    border: solid 1px rgba(179, 179, 179, 0.459);
+    border: solid 1px #f30067;
     text-decoration: none;
     padding: 2px;
     background: white;
@@ -53,26 +50,4 @@
 
 .new-question {
     grid-column: 6/7;
-}
-
-.search-component {
-    grid-column: 1/11;
-}
-
-.search-icon {
-    height: 30px;
-    width: 30px;
-}
-
-.search-icon:hover {
-    
-    height: 31px;
-    width: 31px;
-}
-
-.search-input {
-    vertical-align: top;
-    padding: 4px;
-    margin-bottom: 5px;
-    margin-right: 5px;
 }

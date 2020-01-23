@@ -25,7 +25,7 @@ class QuestionList extends Component {
             {({ loading, error, data }) => {
               if (loading) return <div className = "question-list-header-text" > Carregando a lista...</div>
               if (error) return <div className = "question-list-header-text" > Erro ao buscar questões </div>
-
+              
               const questionsToRender = data.search 
               const dataLenght = Object.keys(questionsToRender).length
               if( dataLenght === 0 ) return <div className = "no-questions-warning" > Não foram encontradas questões com "{ input }". </div>
