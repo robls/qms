@@ -2,6 +2,10 @@
     <img src="./src/icons/logoEnfase.png"></img>
 </h1>
 
+<h1>
+    <img src="https://imgur.com/4OwD0xf.gif"></img>
+</h1>
+
 # Indice
 
  - [Sobre](#-sobre)
