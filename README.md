@@ -3,7 +3,7 @@
 </h1>
 
 <h1>
-    <img src="https://imgur.com/4OwD0xf.gif"></img>
+    <img src="https://i.imgur.com/59IK2tH.gif"></img>
 </h1>
 
 # Indice
@@ -11,6 +11,7 @@
  - [Sobre](#-sobre)
  - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
  - [Como baixar o projeto](#-como-baixar-o-projeto)
+ - [Problemas Reconhecidos](#-problemas-reconhecidos)
 
 
 # 🗒 Sobre.
@@ -31,29 +32,34 @@ Aplicação criada para uma entrevista de emprego na empresa Enfase Labs(São Ca
 # 📂 Como baixar o projeto.
 
 ```bash
-# Clonar o repositorio
+# Clonar o repositório
 $ git clone https://github.com/robls/qms.git
 
-# Acessar a pasta do repositorio
+# Acessar a pasta do repositório
 $ cd qms
 
 # Acessar a pasta do servidor
 $ cd qms-server
 
-# Instale as dependencias do servidor
+# Instale as dependências do servidor
 $ npm install
 
 # Inicialize o servidor
 $ npm start
 
-# Em outro terminal acesse novamente a pasta do repositorio
-# Instale as dependencias da aplicacao web
+# Em outro terminal acesse novamente a pasta do repositório
+# Instale as dependências da aplicação web
 $ npm install
 
-# Inicie o projeto 
+# Inicie o projeto
 $ npm start
 ```
+---
+
+# 🆘 Problemas reconhecidos
+
+- Atualizar estado de questões armazenadas após exclusão de qualquer questão !
 
 ---
 
-Desenvolvido 💜 por Joao Roberto Lopes da Silva 
+Desenvolvido 💜 por João Roberto Lopes da Silva
